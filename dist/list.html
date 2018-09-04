@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>美妆</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div class="top-nav">
+    <div class="top-nav-auto">
+        <a href="index.html">
+            <span><img src="./img/icon-back.png" alt=""></span>
+        </a>
+    </div>
+    <div class="top-nav-center">
+        <span></span><em></em>
+        <h1>
+            美妆
+        </h1>
+        <em></em><span></span>
+    </div>
+    <div class="top-nav-auto">
+        <a href="javascript:;">
+            <span><img src="./img/icon-close-white.png" alt=""></span>
+        </a>
+    </div>
+</div>
+
+<div class="space50"></div>
+
+<div class="su-search-default">
+    <div class="su-search-default-box">
+        <div class="placeholder">
+            <i class="weui-icon-search"></i>
+            <span>请输入关键字</span>
+        </div>
+        <input type="search" id="search">
+    </div>
+
+</div>
+
+<div class="list-menus">
+    <ul>
+        <li><a href="javascript:;" class="active">保健</a></li>
+        <li><a href="javascript:;">美妆</a></li>
+        <li><a href="javascript:;">酒水</a></li>
+        <li><a href="javascript:;">茶品</a></li>
+    </ul>
+</div>
+
+<div class="su-list-two su-list-two-pr">
+    <a href="javascript:;" class="su-list-two-item">
+        <div class="su-list-two-img" style="background-image: url('./img/test/t4.jpg')"></div>
+        <div class="su-list-two-title">
+            <i class="di">抵扣</i>博取呆在地遥 有派夺圧要需要需要
+        </div>
+        <div class="su-list-two-bottom">
+            <div class="su-list-two-bottom__left">
+                ￥13.244
+            </div>
+            <div class="su-list-two-bottom__right">
+            </div>
+        </div>
+    </a>
+    <a href="javascript:;" class="su-list-two-item">
+        <div class="su-list-two-img" style="background-image: url('./img/test/t4.jpg')"></div>
+        <div class="su-list-two-title">
+            <i class="di">抵扣</i>博取呆在地遥 有派夺圧要需要需要
+        </div>
+        <div class="su-list-two-bottom">
+            <div class="su-list-two-bottom__left">
+                ￥13.244
+            </div>
+            <div class="su-list-two-bottom__right">
+            </div>
+        </div>
+    </a>
+    <a href="javascript:;" class="su-list-two-item">
+        <div class="su-list-two-img" style="background-image: url('./img/test/t4.jpg')"></div>
+        <div class="su-list-two-title">
+            <i class="di">抵扣</i>博取呆在地遥 有派夺圧要需要需要
+        </div>
+        <div class="su-list-two-bottom">
+            <div class="su-list-two-bottom__left">
+                ￥13.244
+            </div>
+            <div class="su-list-two-bottom__right">
+            </div>
+        </div>
+    </a>
+    <a href="javascript:;" class="su-list-two-item">
+        <div class="su-list-two-img" style="background-image: url('./img/test/t4.jpg')"></div>
+        <div class="su-list-two-title">
+            <i class="di">抵扣</i>博取呆在地遥 有派夺圧要需要需要
+        </div>
+        <div class="su-list-two-bottom">
+            <div class="su-list-two-bottom__left">
+                ￥13.244
+            </div>
+            <div class="su-list-two-bottom__right">
+            </div>
+        </div>
+    </a>
+    <a href="javascript:;" class="su-list-two-item">
+        <div class="su-list-two-img" style="background-image: url('./img/test/t4.jpg')"></div>
+        <div class="su-list-two-title">
+            <i class="di">抵扣</i>博取呆在地遥 有派夺圧要需要需要
+        </div>
+        <div class="su-list-two-bottom">
+            <div class="su-list-two-bottom__left">
+                ￥13.244
+            </div>
+            <div class="su-list-two-bottom__right">
+            </div>
+        </div>
+    </a>
+    <a href="javascript:;" class="su-list-two-item">
+        <div class="su-list-two-img" style="background-image: url('./img/test/t4.jpg')"></div>
+        <div class="su-list-two-title">
+            <i class="di">抵扣</i>博取呆在地遥 有派夺圧要需要需要
+        </div>
+        <div class="su-list-two-bottom">
+            <div class="su-list-two-bottom__left">
+                ￥13.244
+            </div>
+            <div class="su-list-two-bottom__right">
+            </div>
+        </div>
+    </a>
+
+</div>
+
+
+
+<div class="su-top">
+    <img src="./img/icon-top.png" alt="">
+</div>
+
+<script>
+    !(function () {
+        var searchBox = document.querySelector('.su-search-default-box');
+        var searchInput = document.getElementById('search');
+        var palceholder = document.querySelector('.placeholder');
+        searchBox.addEventListener('click',function () {
+            palceholder.style.display = 'none';
+            searchInput.focus();
+        });
+        searchInput.addEventListener('blur',function (e) {
+            var target = e.target;
+            if(!target.value){
+                palceholder.style.display = 'flex';
+            }
+        })
+    })();
+</script>
+</body>
+</html>

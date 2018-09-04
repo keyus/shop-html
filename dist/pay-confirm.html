@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>充值金额</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="top-nav">
+    <div class="top-nav-auto">
+        <a href="javascript:;">
+            <span><img src="./img/icon-back.png" alt=""></span>
+        </a>
+    </div>
+    <div class="top-nav-center">
+        <span></span><em></em>
+        <h1>
+            充值金额
+        </h1>
+        <em></em><span></span>
+    </div>
+    <div class="top-nav-auto">
+        <a href="javascript:;">
+            <span><img src="./img/icon-close-white.png" alt=""></span>
+        </a>
+    </div>
+</div>
+
+<div class="pay">
+    <div class="space50"></div>
+
+    <div class="su-confirm-money">￥ 1234513.021</div>
+
+    <div class="weui-cells weui-cells_form pay-form add-bank-form-bottom">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">订单信息</label></div>
+            <div class="weui-cell__bd ">
+                <input class="weui-input" readonly="readonly" value="充值">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">付款方式</label></div>
+            <div class="weui-cell__bd select-bank-area">
+                <input class="weui-input pay-select" type="text" value="支付宝" data-value="0" readonly="readonly" >
+            </div>
+        </div>
+    </div>
+
+    <div class="su-submit-pay">
+        <a href="javascript:;" class="su-submit-pay-btn">支付</a>
+    </div>
+</div>
+
+<script src="./js/weui.min.js"></script>
+<script>
+    !(function () {
+        document.querySelector('.pay-select').addEventListener('click',function (e) {
+            var target = e.target;
+            weui.picker([
+                {
+                    label: '支付宝',
+                    value: 0,
+                },
+                {
+                    label: '中国银行',
+                    value: 1,
+                },
+            ], {
+                className: 'bank-picker',
+                container: 'body',
+                defaultValue: [''],
+                onConfirm: function (result) {
+                    target.value = result[0].label;
+                    target.dataset.value = result[0].value;
+                },
+                id: 'singleLinePicker'
+            });
+        })
+
+    })()
+</script>
+</body>
+</html>

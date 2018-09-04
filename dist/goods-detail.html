@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div class="top-nav">
+    <div class="top-nav-auto">
+        <a href="index.html">
+            <span><img src="./img/icon-back.png" alt=""></span>
+        </a>
+    </div>
+    <div class="top-nav-center">
+        <span></span><em></em>
+        <h1>
+            商品详情
+        </h1>
+        <em></em><span></span>
+    </div>
+    <div class="top-nav-auto">
+        <a href="javascript:;">
+            <span><img src="./img/icon-close-white.png" alt=""></span>
+        </a>
+    </div>
+</div>
+
+<div class="space50"></div>
+
+<div class="swiper-container goods-banner">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('./img/test/t6.jpg')"></div>
+        <div class="swiper-slide" style="background-image: url('./img/test/t1.jpg')"></div>
+        <div class="swiper-slide" style="background-image: url('./img/test/t2.jpg')"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="goods-header">
+    <h2 class="goods-header-title">
+        NYX 定妆喷雾 超强定妆力 持久不脱妆 MSS01雾面60ml
+    </h2>
+    <p class="goods-header-intro">
+        NYX 定妆喷雾 超强定妆力 持久不脱妆 MSS01雾 面60ml
+    </p>
+    <p class="goods-header-price">￥516323.00</p>
+    <p class="goods-header-rule">规格：xxxxxx</p>
+    <div class="goods-header-nums">
+        <div>数量：</div>
+        <div class="su-add">
+            <a href="javascript:;"><img src="./img/icon-jia.png"></a>
+            <input value="2" maxlength="3" readonly="readonly" />
+            <a href="javascript:;"><img src="./img/icon-jian.png"></a>
+        </div>
+    </div>
+</div>
+
+<div class="goods-detail">
+    <p><img src="./img/test/t7.jpg" alt=""></p>
+</div>
+
+<div class="space50"></div>
+<div class="shopping-bar">
+    <div class="shopping-bar-mall">
+        <a href="javascript:;">
+            <span class="icon"><img src="./img/icon-shop.png" alt=""></span>
+            <span>商城</span>
+        </a>
+    </div>
+    <div class="shopping-bar-car">
+        <a href="javascript:;">
+            <span class="icon"><img src="./img/icon-car.png" alt=""></span>
+            <span>购物车</span>
+        </a>
+    </div>
+    <div class="shopping-bar-service">
+        <a href="javascript:;">
+            <span class="icon"><img src="./img/icon-service-white.png" alt=""></span>
+            <span>客服</span>
+        </a>
+    </div>
+    <div class="shopping-bar-join">
+        <a href="javascript:;">
+            <span>加入购物车</span>
+        </a>
+    </div>
+    <div class="shopping-bar-buy">
+        <a href="javascript:;">
+            <span>立即购买</span>
+        </a>
+    </div>
+</div>
+
+<script src="./js/swiper.min.js"></script>
+<script>
+    !(function () {
+        var swiper = new Swiper('.goods-banner', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    })();
+</script>
+</body>
+</html>

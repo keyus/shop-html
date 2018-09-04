@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>添加银行卡</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div class="top-nav">
+    <div class="top-nav-auto">
+        <a href="index.html">
+            <span><img src="./img/icon-back.png" alt=""></span>
+        </a>
+    </div>
+    <div class="top-nav-center">
+        <span></span><em></em>
+        <h1>
+            添加银行卡
+        </h1>
+        <em></em><span></span>
+    </div>
+    <div class="top-nav-auto">
+        <a href="javascript:;">
+            <span><img src="./img/icon-close-white.png" alt=""></span>
+        </a>
+    </div>
+</div>
+<div class="add-bank">
+    <div class="space50"></div>
+
+    <div class="weui-cells weui-cells_form add-bank-form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">持卡人姓名</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" maxlength="20" placeholder="请输入持卡人姓名">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">身份证号</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="number" maxlength="20" pattern="[0-9]*" placeholder="请输入身份证号">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">银行预留手机</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="number" maxlength="11" pattern="[0-9]*" placeholder="请输入预留手机号">
+            </div>
+        </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form add-bank-form-bottom">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">所属银行</label></div>
+            <!--银行卡代码，映射到data-value-->
+            <div class="weui-cell__bd select-bank-area">
+                <input class="weui-input select-bank" readonly="readonly" placeholder="请选择银行" data-value="" type="text" maxlength="30">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">银行卡号</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="number" maxlength="20" pattern="[0-9]*" placeholder="请输入本人银行卡号">
+            </div>
+        </div>
+    </div>
+
+    <div class="su-btn-bottom">
+        <a href="javascript:;">确认新添银卡</a>
+    </div>
+</div>
+
+<script src="./js/weui.min.js"></script>
+<script>
+    !(function () {
+        document.querySelector('.select-bank').addEventListener('click',function (e) {
+            var target = e.target;
+            weui.picker([
+                {
+                    label: '请选择银行',
+                    value: '',
+                    disabled: true // 不可用
+                },
+                {
+                    label: '中国银行',
+                    value: 0,
+                },
+                {
+                    label: '农业银行',
+                    value: 1
+                },
+                {
+                    label: '工商银行',
+                    value: 3
+                },
+                {
+                    label: '建设银行',
+                    value: 4,
+                }
+            ], {
+                className: 'bank-picker',
+                container: 'body',
+                defaultValue: [''],
+                // onChange: function (result) {
+                //      console.log(result)
+                // },
+                onConfirm: function (result) {
+                    target.value = result[0].label;
+                    target.dataset.value = result[0].value;
+                },
+                id: 'singleLinePicker'
+            });
+        })
+
+    })()
+</script>
+</body>
+</html>
